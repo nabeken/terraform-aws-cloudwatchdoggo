@@ -8,4 +8,5 @@ module "cloudwatch" {
   prefix     = var.prefix
   source_zip = var.source_zip
   sns_arn    = var.sns_arn
+  debug_on   = var.debug_on
 }
