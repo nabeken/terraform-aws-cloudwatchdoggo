@@ -109,7 +109,7 @@ resource "aws_lambda_function" "main" {
   handler          = "cloudwatchdoggo"
   filename         = local.source_zip
   source_code_hash = filebase64sha256(local.source_zip)
-  runtime          = "go1.x"
+  runtime          = "provided.al2"
   timeout          = 60
 
   environment {

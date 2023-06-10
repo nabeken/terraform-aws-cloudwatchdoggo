@@ -6,7 +6,7 @@ variable "prefix" {
 variable "source_version" {
   type        = string
   description = "A version of the upstream release"
-  default     = "0.0.2"
+  default     = "0.0.3"
 }
 
 variable "source_zip" {

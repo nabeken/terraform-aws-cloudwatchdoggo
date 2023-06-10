@@ -6,7 +6,7 @@
 
 ## Prerequisite
 
-You need to place a zip file that contains the `cloudwatchdoggo` binary into a terraform's working directly before invoking terraform.
+You need to place a zip file that contains the `cloudwatchdoggo` binary as `bootstrap` into a terraform's working directly before invoking terraform. This is because the module will use `provided.al2` runtime instead.
 
 You can find an example script to download the upstream zip file in `scripts` directly.
 
@@ -54,7 +54,7 @@ No modules.
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | A prefix used for the resources created by this module | `string` | n/a | yes |
 | <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | A interval to poke the doggo via CloudWatch Events. It must follow CloudWatch Evetns's schedule expression. | `string` | `"rate(1 minute)"` | no |
 | <a name="input_sns_arn"></a> [sns\_arn](#input\_sns\_arn) | A SNS ARN to bark. It should be a topic where AWS Chatbot subscribes. | `string` | n/a | yes |
-| <a name="input_source_version"></a> [source\_version](#input\_source\_version) | A version of the upstream release | `string` | `"0.0.2"` | no |
+| <a name="input_source_version"></a> [source\_version](#input\_source\_version) | A version of the upstream release | `string` | `"0.0.3"` | no |
 | <a name="input_source_zip"></a> [source\_zip](#input\_source\_zip) | A path to custom zip file. You still have to place a zip file in the working directly before invoking terraform. If not specified, terraform will try to locate a zip file based on the `source_version` variable. | `string` | `""` | no |
 
 ## Outputs
